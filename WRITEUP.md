@@ -4,8 +4,8 @@
 
 A minimal Next.js scaffold for a currency-question agent: a text input for
 an FX question, a submit button (display-only for now — no model call is
-wired up yet), and 4 labelled trace blocks in order: **Model decision**,
-**Tool call arguments**, **Tool result**, **Final answer**. This is display
+wired up yet), and 4 labelled trace blocks in order: **Model tool call**,
+**Parsed arguments**, **Tool result**, **Final answer**. This is display
 scaffolding for a future agent trace, not a working conversion agent yet.
 
 ## Building the display page
@@ -41,3 +41,5 @@ rejects at typecheck time for files still inside the app's compile.
 - `npm run build` compiles cleanly (Next.js + TypeScript, no errors).
 - `npm run print-rates` prints JPY with 0 decimals and BHD with 3, matching
   `lib/rates.ts`.
+
+![App running locally at localhost:3000, showing the question box and all 4 labelled blocks](docs/app-running-screenshot.png)

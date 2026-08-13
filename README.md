@@ -3,6 +3,8 @@
 See [WRITEUP.md](WRITEUP.md) for what this is and how it was built, and
 [SCAFFOLD_INSTRUCTION.md](SCAFFOLD_INSTRUCTION.md) for the exact instruction used to scaffold it.
 
+![App running locally at localhost:3000, showing the question box and all 4 labelled blocks](docs/app-running-screenshot.png)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
