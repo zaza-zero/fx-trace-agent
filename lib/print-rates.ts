@@ -1,6 +1,9 @@
 import { getRate } from "./rates.ts";
 
-for (const code of ["JPY", "BHD"]) {
+for (const code of ["JPY", "KWD"]) {
   const entry = getRate(code);
-  console.log(`${code}: ${entry?.rate.toFixed(entry.decimals)}`);
+  if (!entry) {
+    throw new Error(`No rate entry for ${code}`);
+  }
+  console.log(`${code}: rate=${entry.rate} decimals=${entry.decimals}`);
 }

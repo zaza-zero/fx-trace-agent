@@ -4,8 +4,8 @@
 
 A minimal Next.js scaffold for a currency-question agent: a text input for
 an FX question, a submit button (display-only for now — no model call is
-wired up yet), and 4 labelled trace blocks in order: **Model tool call**,
-**Parsed arguments**, **Tool result**, **Final answer**. This is display
+wired up yet), and 4 labelled trace blocks in order: **Model decision**,
+**Tool call arguments**, **Tool result**, **Final answer**. This is display
 scaffolding for a future agent trace, not a working conversion agent yet.
 
 ## Building the display page
@@ -17,16 +17,17 @@ wired in.
 ## Building the rate table
 
 `lib/rates.ts` is a fixed-rate table (explicitly not a live feed), keyed by
-currency code, with each entry holding `rate` (units per 1 USD) and
-`decimals` (how many decimal places that currency is normally written
-with). `lib/print-rates.ts` (run via `npm run print-rates`) looks up and
-prints JPY and BHD to confirm the decimals render correctly — JPY has 0
-decimal places, BHD has 3:
+currency code, covering all seven required codes — USD, EUR, SGD, INR, JPY,
+BHD, KWD — with each entry holding `rate` (units per 1 USD) and `decimals`
+(how many decimal places that currency is normally written with).
+`lib/print-rates.ts` (run via `npm run print-rates`) looks up and prints
+JPY and KWD, showing the rate and the decimal count as two separate
+fields, to confirm the 0-decimal and 3-decimal cases render correctly:
 
 ```
 $ npm run print-rates
-JPY: 147
-BHD: 0.376
+JPY: rate=146.82 decimals=0
+KWD: rate=0.307 decimals=3
 ```
 
 `tsc --noEmit` passes clean over the whole project. `lib/print-rates.ts` is
@@ -39,7 +40,7 @@ rejects at typecheck time for files still inside the app's compile.
 
 - `npm run dev` starts the app with that single command.
 - `npm run build` compiles cleanly (Next.js + TypeScript, no errors).
-- `npm run print-rates` prints JPY with 0 decimals and BHD with 3, matching
+- `npm run print-rates` prints JPY with 0 decimals and KWD with 3, matching
   `lib/rates.ts`.
 
 ![App running locally at localhost:3000, showing the question box and all 4 labelled blocks](docs/app-running-screenshot.png)

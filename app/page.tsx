@@ -29,7 +29,7 @@ export default function Home() {
         </form>
 
         <section className={styles.block}>
-          <h2>Model tool call</h2>
+          <h2>Model decision</h2>
           <p className={styles.placeholder}>
             shown here once wired up: whether the assistant decides to
             convert, ask a follow-up, or decline the request
@@ -37,7 +37,7 @@ export default function Home() {
         </section>
 
         <section className={styles.block}>
-          <h2>Parsed arguments</h2>
+          <h2>Tool call arguments</h2>
           <p className={styles.placeholder}>
             shown here once wired up: the amount and currency pair extracted
             from your question

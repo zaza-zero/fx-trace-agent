@@ -13,9 +13,10 @@ instruction and the command it produced.
 
 ```
 $ npm run print-rates
-JPY: 147
-BHD: 0.376
+JPY: rate=146.82 decimals=0
+KWD: rate=0.307 decimals=3
 ```
 
-JPY prints with 0 decimal places, BHD with 3 — matching the decimal counts
-in [lib/rates.ts](lib/rates.ts).
+JPY prints with 0 decimal places, KWD with 3 — matching the decimal counts
+in [lib/rates.ts](lib/rates.ts), which now covers all seven required
+codes (USD, EUR, SGD, INR, JPY, BHD, KWD).

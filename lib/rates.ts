@@ -11,6 +11,7 @@ export const rates: Record<string, RateEntry> = {
   INR: { rate: 87.1, decimals: 2 },
   JPY: { rate: 146.82, decimals: 0 },
   BHD: { rate: 0.376, decimals: 3 },
+  KWD: { rate: 0.307, decimals: 3 },
 };
 
 export function getRate(code: string): RateEntry | undefined {

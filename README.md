@@ -22,14 +22,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ## Rate table
 
 `lib/rates.ts` holds a fixed (non-live) exchange-rate table keyed by currency
-code. Run:
+code, covering USD, EUR, SGD, INR, JPY, BHD, and KWD. Run:
 
 ```bash
 npm run print-rates
 ```
 
-to print the JPY and BHD rates and confirm they render with the right
-number of decimal places (0 for JPY, 3 for BHD).
+to print the JPY and KWD rates and confirm they render with the right
+number of decimal places (0 for JPY, 3 for KWD).
 
 ## Learn More
 
