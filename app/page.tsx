@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Ask an FX question</h1>
+        <h1>Currency question</h1>
 
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
@@ -24,33 +24,38 @@ export default function Home() {
             className={styles.input}
           />
           <button type="submit" className={styles.button}>
-            Ask
+            Submit
           </button>
         </form>
 
         <section className={styles.block}>
-          <h2>Model decision</h2>
-          <p className={styles.placeholder}>example: convert</p>
+          <h2>Model tool call</h2>
+          <p className={styles.placeholder}>
+            shown here once wired up: whether the assistant decides to
+            convert, ask a follow-up, or decline the request
+          </p>
         </section>
 
         <section className={styles.block}>
-          <h2>Tool call arguments</h2>
+          <h2>Parsed arguments</h2>
           <p className={styles.placeholder}>
-            example: {"{ amount: 100, from: \"EUR\", to: \"SGD\" }"}
+            shown here once wired up: the amount and currency pair extracted
+            from your question
           </p>
         </section>
 
         <section className={styles.block}>
           <h2>Tool result</h2>
           <p className={styles.placeholder}>
-            example: {"{ rate: 1.4531, result: \"S$145.31\" }"}
+            shown here once wired up: the exchange rate applied and the
+            computed total
           </p>
         </section>
 
         <section className={styles.block}>
           <h2>Final answer</h2>
           <p className={styles.placeholder}>
-            example: &quot;That&apos;s about S$145.31.&quot;
+            shown here once wired up: the reply text sent back to the user
           </p>
         </section>
       </main>
